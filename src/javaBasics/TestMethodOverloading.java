@@ -19,13 +19,14 @@ class Adder {
 	There are two ways to overload the method in java
 
 	By changing number of arguments
-	By changing the data type*/
+	By changing the data type of arguments*/
 
 	/*In java, Method Overloading is not possible by changing the return type of the method only.*/
 	static int add(int a,int b){return a+b;}  
 	static int add(int a,int b,int c){return a+b+c;}
 	static double add(double a, double b){return a+b;} 
 	static double add(Double a, Double b){return a+b;} 
+	/*static int add(double a,double b){return (int) (a+b);} */
 	/*double add(Double a, Double b){return a+b;} */// will throw duplicate method error
 	/*static double add(int a,int b){return a+b;}*/  // will throw duplicate method error not possible by changing return type
 	
