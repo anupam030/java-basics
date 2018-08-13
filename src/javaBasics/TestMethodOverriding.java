@@ -35,31 +35,45 @@ Constructors cannot be overridden.*/
 
 //https://www.geeksforgeeks.org/overriding-in-java//
 class Animal {
-	   public void move() {
-	      System.out.println("Animals can move");
-	   }
+	public void move() {
+		System.out.println("Animals can move");
 	}
 
-	class Dog extends Animal {
-	   public void move() {
-	      System.out.println("Dogs can walk and run");
-	   }
-	   public void bark() {
-		   System.out.println("Dogs can bark");
-	   }
+	public void run (int speed) {
+		System.out.println("Animals run at integer speed");
+	}
+}
+
+class Dog extends Animal {
+	public void move() {
+		System.out.println("Dogs can walk and run");
+	}
+	public void bark() {
+		System.out.println("Dogs can bark");
 	}
 
-	public class TestMethodOverriding {
-		   public static void main(String args[]) {
-			      Animal a = new Animal();   // Animal reference and object
-			      Animal b = new Dog();   // Animal reference but Dog object
-                  
-			    //  Dog d= (Dog) new Animal(); // will throw classcast exception
-			      a.move();   // runs the method in Animal class
-			      b.move();   // runs the method in Dog class
-			      /*b.bark();*///will throw compile time error
-			   }
+	public void run (double speed) {
+		System.out.println("Dogs run at double speed");
 	}
-	
-	
-	
+
+	public void run (int speed) {
+		System.out.println("Dogs run at integer speed");
+	}
+}
+
+public class TestMethodOverriding {
+	public static void main(String args[]) {
+		Animal a = new Animal();   // Animal reference and object
+		Animal b = new Dog();   // Animal reference but Dog object
+
+		//  Dog d= (Dog) new Animal(); // will throw classcast exception
+		a.move();   // runs the method in Animal class
+		b.move();   // runs the method in Dog class
+		/*b.bark();*///will throw compile time error
+		a.run(10);
+		b.run(10);
+	}
+}
+
+
+
