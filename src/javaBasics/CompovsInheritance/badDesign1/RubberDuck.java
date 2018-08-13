@@ -16,5 +16,10 @@ public class RubberDuck  extends Duck {
 	public void swim () {
 		//rubber duck don't swim so overriden to squeak
 	}
+	
+	@Override
+	public void fly() {
+		// Override to do nothing
+	}
 
 }
