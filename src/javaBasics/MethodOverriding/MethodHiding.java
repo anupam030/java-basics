@@ -21,7 +21,7 @@ class Parent1
     void m2() { System.out.println("From parent non-static(instance) m2()"); }
 }
  
-class Child1 extends Parent1
+class Childs extends Parent1
 {
     // This method hides m1() in Parent
     static void m1() { System.out.println("From child static m1()");}
@@ -37,7 +37,7 @@ public class MethodHiding
 {
     public static void main(String[] args)
     {
-        Parent1 obj1 = new Child1();
+        Parent1 obj1 = new Childs();
          
         // As per overriding rules this should call to class Child static 
         // overridden method. Since static method can not be overridden, it 
